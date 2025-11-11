@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: center;
   gap: 35px;
+  padding: 50px 0;
 }
 
 .card-section {
@@ -24,4 +25,16 @@
     object-fit: cover;
     display: block;
   }
+}
+
+.row-section {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 20px 0;
+}
+
+.cell {
+  display: flex;
 }
