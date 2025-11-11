@@ -1,1 +1,23 @@
 /*! HERO */
+
+$hero-w: 1440px;
+$hero-h: 387px;
+$hero-ratio: $hero-w / $hero-h;
+
+.hero {
+  @media (min-width: $hero-w) {
+    width: $hero-w;
+    height: $hero-h;
+    margin: 0 auto;
+  }
+
+  width: 100%;
+  height: calc(100vw / $hero-ratio);
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}
