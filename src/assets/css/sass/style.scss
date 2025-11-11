@@ -81,3 +81,12 @@ body {
   font-size: 14px;
   color: $black;
 }
+
+@media (max-width: 480px) {
+  .info-box {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 40px;
+  }
+
+}
