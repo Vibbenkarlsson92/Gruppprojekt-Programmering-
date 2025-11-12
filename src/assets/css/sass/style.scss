@@ -9,6 +9,7 @@ Version: 1.0
 @import "header.scss"; /*Header SASS file*/
 @import "articles.scss"; /*Articles SASS file*/
 @import "card.scss";
+@import "footer.scss";
 
 html {
   width: 100%;
@@ -65,17 +66,17 @@ body {
 }
 
 .info-box {
-	background-color: $white;
-	margin-bottom: 50px;
-	margin-left: 107px;
-	margin-right: 107px;
-	max-width: 1440px;
-	box-sizing: border-box;
-	}
+  background-color: $white;
+  margin-bottom: 50px;
+  margin-left: 107px;
+  margin-right: 107px;
+  max-width: 1440px;
+  box-sizing: border-box;
+}
 
 .info-box__title {
-	color: $black;
-	}
+  color: $black;
+}
 
 .info-box__.info-box__text {
   font-size: 14px;
@@ -88,5 +89,4 @@ body {
     margin-right: 20px;
     margin-bottom: 40px;
   }
-
 }
