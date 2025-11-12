@@ -162,7 +162,6 @@ img {
   flex-direction: column;
   align-items: flex-start;
   gap: 0.79em;
-  border: #000000, 1px solid;
 
   img {
     width: 175px;
@@ -244,6 +243,10 @@ img {
 
   .footer-cell {
     margin: 10px 0 10px;
+  }
+
+  h2 {
+    margin-bottom: 20px;
   }
 }
 
