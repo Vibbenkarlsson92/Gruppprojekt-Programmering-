@@ -1,0 +1,75 @@
+/*GLOBALA REGLER*/
+body {
+  margin: 0;
+  background-color: $white;
+}
+
+/*COLORS*/
+
+$primary-color: #2a5db0;
+$link: #2a5db0;
+$link-hover: darken($link, 20%);
+$grey: #999;
+$light-grey: #ccc;
+$white: #ffffff;
+$black: #000000;
+
+$primary-font: "playfair display";
+$secondary-font: "open sans";
+
+/*BREAKPOINT % MIXIN*/
+
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+
+@mixin respond($point) {
+  @if $point == md {
+    @media (min-width: $breakpoint-md) {
+      @content;
+    }
+  } @else if $point == lg {
+    @media (min-width: $breakpoint-lg) {
+      @content;
+    }
+  }
+}
+
+/*FONTS*/
+
+%heading-base {
+  font-family: $primary-font;
+  color: $black;
+  font-weight: normal;
+  margin: 0;
+}
+
+%p-base {
+  font-family: $secondary-font;
+  color: $black;
+  font-size: 14px;
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  @extend %heading-base;
+}
+
+h1 {
+  font-size: 1.8em;
+}
+
+h2 {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 0.93em;
+  font-weight: bold;
+}
+
+p {
+  @extend %p-base;
+}
