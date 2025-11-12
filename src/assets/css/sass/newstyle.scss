@@ -1,7 +1,6 @@
 /*GLOBALA REGLER*/
 body {
   margin: 0;
-  background-color: $white;
 }
 
 /*COLORS*/
@@ -72,4 +71,25 @@ h3 {
 
 p {
   @extend %p-base;
+}
+
+/*================SECTIONER===================*/
+
+/*Text section*/
+
+.info-box {
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  gap: 1.14em;
+  box-sizing: border-box;
+  margin: 1.71em;
+
+  @include respond(md) {
+    margin: 3.57em;
+  }
+
+  @include respond(lg) {
+    margin: 3.57em;
+  }
 }
