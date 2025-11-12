@@ -16,21 +16,26 @@ $black: #000000;
 $primary-font: "playfair display";
 $secondary-font: "open sans";
 
-/*BREAKPOINT % MIXIN*/
+/*Padding*/
 
-$breakpoint-md: 768px;
-$breakpoint-lg: 1024px;
+$padding-sm: 1.14em;
+$padding-md: 1.71em;
+$padding-lg: 2.29em;
 
-@mixin respond($point) {
-  @if $point == md {
-    @media (min-width: $breakpoint-md) {
-      @content;
-    }
-  } @else if $point == lg {
-    @media (min-width: $breakpoint-lg) {
-      @content;
-    }
-  }
+/*Margin*/
+
+$margin-sm: 1.75em;
+$margin-md: 2.75em;
+$margin-lg: 3.75em;
+
+/*BREAKPOINT*/
+
+/* Mobil */
+@media (max-width: 599px) {
+}
+
+/* Tablet */
+@media (min-width: 600px) and (max-width: 1023px) {
 }
 
 /*FONTS*/
@@ -56,7 +61,7 @@ h3 {
 }
 
 h1 {
-  font-size: 1.8em;
+  font-size: 25px;
 }
 
 h2 {
@@ -66,16 +71,36 @@ h2 {
 
 h3 {
   font-size: 0.93em;
-  font-weight: bold;
 }
 
 p {
   @extend %p-base;
 }
 
+/* Mobil */
+@media (max-width: 599px) {
+  h1 {
+    font-size: 0.7em;
+  }
+  h2 {
+    font-size: 1em;
+  }
+
+  /* Tablet */
+  @media (min-width: 600px) and (max-width: 1023px) {
+    h1 {
+      font-size: 1.4em;
+    }
+
+    h2 {
+      font-size: 1.4em;
+    }
+  }
+}
+
 /*================SECTIONER===================*/
 
-/*! HERO */
+/* HERO */
 
 $hero-w: 100%;
 $hero-h: auto;
@@ -102,38 +127,42 @@ img {
   background-color: $white;
   gap: 1.14em;
   box-sizing: border-box;
-  margin: 1.71em;
+  margin: $margin-lg;
 
-  @include respond(md) {
-    margin: 3.57em;
+  /* Mobil */
+  @media (max-width: 599px) {
+    margin: $margin-sm;
   }
 
-  @include respond(lg) {
-    margin: 3.57em;
+  /* Tablet */
+  @media (min-width: 600px) and (max-width: 1023px) {
+    margin: $margin-md;
   }
 }
 
 /*Card section*/
+
 .main-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 50px;
   gap: 16px;
+  margin: $margin-lg;
 }
 
 .card-section {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 16px;
+  row-gap: $padding-md;
 }
 
 .profile-card {
-  width: 175px;
   display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
+  gap: 0.79em;
+  border: #000000, 1px solid;
 
   img {
     width: 175px;
@@ -143,18 +172,57 @@ img {
   }
 }
 
+/* Mobil */
+@media (max-width: 599px) {
+  .main-section {
+    margin: $margin-sm;
+  }
+
+  .profile-card img {
+    width: 150px;
+    height: 265px;
+  }
+}
+
+/* Tablet */
+@media (min-width: 600px) and (max-width: 1023px) {
+  .card-section {
+    margin: $margin-md;
+  }
+  img {
+    width: 120px;
+    height: 90px;
+  }
+}
+
 /*Card section*/
+
 .row-section {
   max-width: 100%;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  padding: 20px 0;
-  margin: 20px 50px;
+  padding: $padding-md 0;
+  margin: $margin-lg;
 }
 
 .cell {
   display: flex;
+  max-height: 86px;
+}
+
+/* Mobil */
+@media (max-width: 599px) {
+  .row-section {
+    margin: $margin-sm;
+  }
+}
+
+/* Tablet */
+@media (min-width: 600px) and (max-width: 1023px) {
+  .row-section {
+    margin: $margin-md;
+  }
 }
 
 /*FOOTER*/
@@ -176,5 +244,25 @@ img {
 
   .footer-cell {
     margin: 10px 0 10px;
+  }
+}
+
+/* Mobil */
+@media (max-width: 599px) {
+  #footer .footer-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: $margin-sm;
+  }
+  .footer-cell {
+    text-align: center;
+  }
+}
+
+/* Tablet */
+@media (min-width: 600px) and (max-width: 1023px) {
+  .footer-container {
+    margin: $margin-md;
   }
 }
