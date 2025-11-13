@@ -41,7 +41,7 @@ $margin-lg: 3.75em;
 }
 
 /* Tablet */
-@media (min-width: 600px) and (max-width: 1023px) {
+@media (min-width: 600px) and (max-width: 1024px) {
 }
 
 /*FONTS*/
@@ -102,7 +102,7 @@ p {
   }
 
   /* Tablet */
-  @media (min-width: 600px) and (max-width: 1023px) {
+  @media (min-width: 600px) and (max-width: 1024px) {
     h2 {
       font-size: 1.4em;
     }
@@ -150,7 +150,7 @@ img {
   }
 
   /* Tablet */
-  @media (min-width: 600px) and (max-width: 1023px) {
+  @media (min-width: 600px) and (max-width: 1024px) {
     margin: $margin-md;
   }
 }
@@ -202,7 +202,7 @@ img {
 }
 
 /* iPad / Tablet (600–1023px): 4 per rad (→ 3 rader vid 12 items), fyller containern */
-@media (min-width: 600px) and (max-width: 1023px) {
+@media (min-width: 600px) and (max-width: 1024px) {
   .card-section {
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 24px;
@@ -213,7 +213,6 @@ img {
 /*Card section*/
 
 .row-section {
-  max-width: 100%;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
@@ -234,7 +233,7 @@ img {
 }
 
 /* Tablet */
-@media (min-width: 600px) and (max-width: 1023px) {
+@media (min-width: 600px) and (max-width: 1024px) {
   .row-section {
     margin: $margin-md;
   }
@@ -280,7 +279,7 @@ img {
 }
 
 /* Tablet */
-@media (min-width: 600px) and (max-width: 1023px) {
+@media (min-width: 600px) and (max-width: 1024px) {
   .footer-container {
     margin: $margin-md;
   }
@@ -298,7 +297,7 @@ img {
   padding-top: 10px;
 
   /*Breakpoint for when menu can't fit the screen anymore*/
-  @media screen and (max-width: 1190px) {
+  @media screen and (max-width: 1024px) {
     padding: 2%;
     box-sizing: border-box;
     height: auto;
@@ -323,7 +322,7 @@ img {
     padding-right: 5%;
 
     /*Breakpoint for when menu can't fit the screen anymore*/
-    @media screen and (max-width: 1190px) {
+    @media screen and (max-width: 1024px) {
       min-width: auto;
       max-height: 0px;
       @include transition(1s); /*Taken fomr mixin.scss*/
@@ -407,7 +406,7 @@ img {
         }
 
         /*Breakpoint for when menu can't fit the screen anymore*/
-        @media screen and (max-width: 1190px) {
+        @media screen and (max-width: 1024px) {
           &.icon {
             display: inline-block !important;
             position: absolute;
