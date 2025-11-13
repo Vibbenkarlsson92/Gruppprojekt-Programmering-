@@ -4,11 +4,6 @@
 @import "header.scss"; /*Header SASS file*/
 @import "articles.scss"; /*Articles SASS file*/
 
-/*GLOBALA REGLER*/
-body {
-  margin: 0;
-}
-
 /*COLORS*/
 
 $primary-color: #2a5db0;
@@ -80,7 +75,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.4em;
+  font-size: 19px;
   font-weight: bold;
 }
 
@@ -142,7 +137,7 @@ img {
   background-color: $white;
   gap: 1.14em;
   box-sizing: border-box;
-  margin: $margin-lg;
+  margin: 0px;
 
   /* Mobil */
   @media (max-width: 599px) {
@@ -176,7 +171,7 @@ img {
 
   .main-cell-i {
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
   }
 
   h3 {
@@ -293,7 +288,7 @@ img {
 #footer {
   width: 100%;
   border-top: 2px solid #999;
-  margin: 20px 0 20px; // Linjen ovanför footern
+  margin: 20px 0 20px;
 
   .footer-container {
     display: flex;
