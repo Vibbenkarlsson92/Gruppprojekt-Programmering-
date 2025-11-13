@@ -62,20 +62,29 @@ $margin-lg: 3.75em;
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   @extend %heading-base;
 }
 
 h1 {
-  font-size: 25px;
+  font-family: Open Sans, sans-serif;
+  font-size: 1.875rem;
+  font-weight: bold;
+  line-height: 2.1875rem;
 }
 
 h2 {
+  font-size: 25px;
+  line-height: auto;
+}
+
+h3 {
   font-size: 1.4em;
   font-weight: bold;
 }
 
-h3 {
+h4 {
   font-size: 0.93em;
 }
 
@@ -277,6 +286,8 @@ img {
   }
 }
 
+/*! HEADER STYLES */
+
 #header {
   width: 110%;
   height: 130px;
@@ -409,7 +420,7 @@ img {
           }
         } /*@media screen and (max-width: 1190px)*/
 
-        // Sma  rtphones
+        // Smartphones
         @media (max-width: 870px) {
           &.icon {
             top: 15px;
