@@ -94,20 +94,20 @@ p {
 
 /* Mobil */
 @media (max-width: 599px) {
-  h1 {
+  h2 {
     font-size: 0.7em;
   }
-  h2 {
+  h3 {
     font-size: 1em;
   }
 
   /* Tablet */
   @media (min-width: 600px) and (max-width: 1023px) {
-    h1 {
+    h2 {
       font-size: 1.4em;
     }
 
-    h2 {
+    h3 {
       font-size: 1.4em;
     }
   }
