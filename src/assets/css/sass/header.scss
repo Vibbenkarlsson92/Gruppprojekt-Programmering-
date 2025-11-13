@@ -24,6 +24,7 @@
     padding: 0 5%;
     @include size(35, 40);
     margin-bottom: 5px;
+    margin-left: 5%;
   }
 
   nav#menu {
@@ -33,6 +34,7 @@
     border-top: 1px solid $light-grey;
     padding-left: 5%;
     padding-right: 5%;
+    margin-left: 5%;
 
     /*Breakpoint for when menu can't fit the screen anymore*/
     @media screen and (max-width: 1190px) {
