@@ -1,3 +1,9 @@
+@import "colors.scss"; /*Colors SASS file*/
+@import "mixin.scss"; /*Mixin SASS file*/
+@import "fonts.scss"; /*Fonts SASS file*/
+@import "header.scss"; /*Header SASS file*/
+@import "articles.scss"; /*Articles SASS file*/
+
 /*GLOBALA REGLER*/
 body {
   margin: 0;
@@ -140,7 +146,7 @@ img {
   }
 }
 
-/*Card section*/
+/* Card section */
 
 .main-section {
   display: flex;
@@ -150,47 +156,48 @@ img {
   margin: $margin-lg;
 }
 
+/* Desktop: 6 per rad, fyller containern via 1fr-kolumner */
 .card-section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  row-gap: $padding-md;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: $padding-md; /* jämnt avstånd horisontellt & vertikalt */
 }
 
+/* Kortet */
 .profile-card {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 0.79em;
 
+  /* Bilden fyller kolumnen och behåller proportioner */
   img {
-    width: 175px;
-    height: 290px;
+    width: 100%;
+    aspect-ratio: 175 / 290; /* motsvarar ~din tidigare 175x290 */
     object-fit: cover;
     display: block;
   }
 }
 
-/* Mobil */
+/* Mobil (≤599px): 2 per rad med full utfyllnad */
 @media (max-width: 599px) {
   .main-section {
     margin: $margin-sm;
   }
 
-  .profile-card img {
-    width: 150px;
-    height: 265px;
+  .card-section {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    margin: $margin-md; /* valfritt: inner-marginal runt gridden */
   }
 }
 
-/* Tablet */
+/* iPad / Tablet (600–1023px): 4 per rad (→ 3 rader vid 12 items), fyller containern */
 @media (min-width: 600px) and (max-width: 1023px) {
   .card-section {
-    margin: $margin-md;
-  }
-  img {
-    width: 120px;
-    height: 90px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+    margin: $margin-md; /* valfritt */
   }
 }
 
@@ -269,3 +276,146 @@ img {
     margin: $margin-md;
   }
 }
+
+#header {
+  width: 110%;
+  height: 130px;
+  overflow: hidden;
+  background: white;
+  display: block;
+  margin-left: -5%;
+  padding-top: 10px;
+
+  /*Breakpoint for when menu can't fit the screen anymore*/
+  @media screen and (max-width: 1190px) {
+    padding: 2%;
+    box-sizing: border-box;
+    height: auto;
+    position: relative;
+  }
+
+  /*#header h1*/
+  h1 {
+    vertical-align: middle;
+    display: inline-block;
+    padding: 0 5%;
+    @include size(35, 40);
+    margin-bottom: 5px;
+  }
+
+  nav#menu {
+    display: block;
+    width: 90%;
+    border-bottom: 1px solid $light-grey;
+    border-top: 1px solid $light-grey;
+    padding-left: 5%;
+    padding-right: 5%;
+
+    /*Breakpoint for when menu can't fit the screen anymore*/
+    @media screen and (max-width: 1190px) {
+      min-width: auto;
+      max-height: 0px;
+      @include transition(1s); /*Taken fomr mixin.scss*/
+
+      li {
+        display: none !important;
+      }
+
+      /*Open menu*/
+      &.responsive {
+        width: 100%;
+        max-height: 1000px;
+        @include transition(1s); /*Taken fomr mixin.scss*/
+
+        li {
+          &:not(:last-child) {
+            float: none;
+            display: block !important;
+            text-align: left;
+            padding: 1% 0;
+            border-top: 1px solid $light-grey;
+            margin: 0;
+            margin-left: -5%;
+            padding-left: 5%;
+          }
+
+          &:first-child {
+            border-top: 0;
+          }
+
+          a.current {
+            padding-bottom: 6px;
+          }
+        }
+      }
+    } /*Close @media screen and (max-width: 1190px)*/
+
+    ul {
+      display: block;
+
+      li {
+        display: inline-block;
+        vertical-align: middle;
+        font-weight: bold;
+        margin: 0 1%;
+        font-family: $primary-font;
+        @include size(20, 25);
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        a.current {
+          color: $link-hover;
+          border-bottom: 3px solid $link-hover;
+          padding-bottom: 16px;
+        }
+
+        &.icon {
+          display: none;
+        }
+
+        &.search input#searchInput {
+          background-image: url("/src/assets/searchicon.png");
+          background-position: 7px 10px;
+          background-repeat: no-repeat;
+          width: 160px;
+          background-size: 15px auto;
+          box-sizing: border-box;
+          padding: 5px 5px 5px 30px;
+          border: 1px solid $light-grey;
+          margin: 12px 0;
+          box-shadow: 0 0 0 transparent;
+          font-family: $primary-font;
+          @include size(20, 25);
+
+          &:focus {
+            box-shadow: 0 0 5px $link;
+            @include transition(0.3s);
+          }
+        }
+
+        /*Breakpoint for when menu can't fit the screen anymore*/
+        @media screen and (max-width: 1190px) {
+          &.icon {
+            display: inline-block !important;
+            position: absolute;
+            right: 5%;
+            top: 30px;
+
+            a {
+              font-size: 20px;
+            }
+          }
+        } /*@media screen and (max-width: 1190px)*/
+
+        // Sma  rtphones
+        @media (max-width: 870px) {
+          &.icon {
+            top: 15px;
+          }
+        }
+      } /*Close li*/
+    } /*Close ul*/
+  } /*Close nav#menu*/
+} /*Close #header*/

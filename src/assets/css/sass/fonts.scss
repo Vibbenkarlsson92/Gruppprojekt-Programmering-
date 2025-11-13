@@ -58,24 +58,6 @@ li {
   margin-top: 5px;
 }
 
-h1 {
-  font: {
-    family: $secondary-font;
-    weight: bold;
-  }
-  @include size(30, 35);
-}
-
-h2 {
-  font: {
-    family: $primary-font;
-    weight: bold;
-    family: $primary-font;
-    weight: normal;
-  }
-  @include size(20, 25);
-}
-
 /*------LINKS-----*/
 
 a {
