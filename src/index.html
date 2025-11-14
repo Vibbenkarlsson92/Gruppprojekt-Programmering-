@@ -7,8 +7,7 @@
     <!--Stylesheets-->
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700|Playfair+Display:400,700"
-      rel="stylesheet"
-    />
+      rel="stylesheet" />
     <link rel="stylesheet" href="./assets/css/reset.css" type="text/css" />
     <link rel="stylesheet" href="./assets/css/style.css" type="text/css" />
     <link rel="stylesheet" href="assets/css/sass/newstyle.scss" />
@@ -48,8 +47,7 @@
                 id="searchInput"
                 onkeyup="searchFunction()"
                 placeholder="Search titles"
-                title="Type in title search term"
-              />
+                title="Type in title search term" />
             </li>
             <li class="icon">
               <a href="javascript:void(0);" onclick="menuFunction()">&#9776;</a>
@@ -58,52 +56,50 @@
         </nav>
       </header>
 
-      <section id="content"></section>
+      <section id="content" class="content-starting-page"></section>
 
-    
- <footer id="footer">
-      <div class="footer-line"></div>
-      <div class="footer-container">
-        <div class="footer-cell">
-          <h3>About us</h3>
-          <p>What we do</p>
-          <p>Who we are</p>
+      <footer id="footer">
+        <div class="footer-line"></div>
+        <div class="footer-container">
+          <div class="footer-cell">
+            <h3>About us</h3>
+            <p>What we do</p>
+            <p>Who we are</p>
+          </div>
+          <div class="footer-cell">
+            <h3>About you</h3>
+            <p>Customers</p>
+            <p>Latest</p>
+          </div>
+          <div class="footer-cell">
+            <h3>Address</h3>
+            <p>Google street 5,</p>
+            <p>526 42 Googleville</p>
+          </div>
+          <div class="footer-cell copyright">
+            <p>© 2022 Google News</p>
+          </div>
         </div>
-        <div class="footer-cell">
-          <h3>About you</h3>
-          <p>Customers</p>
-          <p>Latest</p>
-        </div>
-        <div class="footer-cell">
-          <h3>Address</h3>
-          <p>Google street 5,</p>
-          <p>526 42 Googleville</p>
-        </div>
-        <div class="footer-cell copyright">
-          <p>© 2022 Google News</p>
-        </div>
-      </div>
-    </footer>
-
-        <!--Wather widget-->
-        <script>
-          !(function (d, s, id) {
-            var js,
-              fjs = d.getElementsByTagName(s)[0];
-            if (!d.getElementById(id)) {
-              js = d.createElement(s);
-              js.id = id;
-              js.src = "https://weatherwidget.io/js/widget.min.js";
-              fjs.parentNode.insertBefore(js, fjs);
-            }
-          })(document, "script", "weatherwidget-io-js");
-        </script>
-        <!--JS Scripts-->
-        <script type="text/javascript" src="./assets/js/menu.js"></script>
-        <!--Mobile menu JS-->
-        <script type="text/javascript" src="./assets/js/request.js"></script>
-        <!--JSON API request JS-->
       </footer>
+
+      <!--Wather widget-->
+      <script>
+        !(function (d, s, id) {
+          var js,
+            fjs = d.getElementsByTagName(s)[0];
+          if (!d.getElementById(id)) {
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://weatherwidget.io/js/widget.min.js";
+            fjs.parentNode.insertBefore(js, fjs);
+          }
+        })(document, "script", "weatherwidget-io-js");
+      </script>
+      <!--JS Scripts-->
+      <script type="text/javascript" src="./assets/js/menu.js"></script>
+      <!--Mobile menu JS-->
+      <script type="text/javascript" src="./assets/js/request.js"></script>
+      <!--JSON API request JS-->
     </section>
 
     <script>

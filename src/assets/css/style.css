@@ -556,16 +556,15 @@ body {
     min-height: 100%;
   }
 }
-#content {
-  width: 100%;
-  margin: 0 auto;
+#content.content-starting-page {
+  margin: 0 5%;
   display: block;
   overflow: hidden;
 }
 
 /*------FOOTER-----*/
 #footer {
-  width: 100%;
+  margin: 0 5%;
 }
 
 /*# sourceMappingURL=style.css.map */
