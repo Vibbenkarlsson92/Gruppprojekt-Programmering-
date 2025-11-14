@@ -91,7 +91,7 @@ p {
 /* Mobil */
 @media (max-width: 599px) {
   h2 {
-    font-size: 1.36em;
+    font-size: 1.2em;
   }
   h3 {
     font-size: 1em;
@@ -284,9 +284,10 @@ img {
   background-color: $white;
   gap: 1.14em;
   box-sizing: border-box;
-  margin: 0px;
   margin-top: $margin-lg;
-  margin: 0 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: $margin-lg;
 
   /* Mobil */
   @media (max-width: 599px) {
@@ -306,7 +307,7 @@ img {
   flex-direction: column;
   justify-content: center;
   gap: 30px;
-  margin-top: 107px;
+  margin-top: $margin-lg;
   margin-left: 5%;
   margin-right: 5%;
 }
@@ -338,7 +339,10 @@ img {
 /* Mobil (≤599px): 2 per rad med full utfyllnad */
 @media (max-width: 599px) {
   .main-section {
-    margin: $margin-sm;
+    margin-top: $margin-md;
+    margin-left: $margin-sm;
+    margin-right: $margin-sm;
+    gap: 0;
   }
 
   .card-section {
@@ -379,7 +383,7 @@ img {
     margin: $margin-sm;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 16px;
   }
 }
